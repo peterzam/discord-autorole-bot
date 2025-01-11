@@ -1,0 +1,8 @@
+discord:
+  token: ""
+  guild_id: ""
+  channel_id: ""
+
+db:
+  name: ""
+  sync_time: 1
