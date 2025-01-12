@@ -297,7 +297,7 @@ func deleteUserRoleExpire(session *discordgo.Session, db *sql.DB, userId string,
 	if err != nil {
 		return err
 	} else {
-		session.ChannelMessageSend(config.Discord.ChannelID, "Removed USER :<@"+userId+"> | ROLE :<@&"+roleId+">")
+		session.ChannelMessageSend(config.Discord.ChannelID, "🔴Removed USER :<@"+userId+"> | ROLE :<@&"+roleId+">")
 	}
 	_, err = db.Exec(`DELETE FROM users WHERE userid = ? AND roleid = ?`, userId, roleId)
 	if err != nil {
